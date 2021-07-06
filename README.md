@@ -12,19 +12,18 @@ https://en.wikipedia.org/wiki/Comparison_of_antivirus_software
 ### Cisco AMP (Advanced Malware Protection) for endpoints
 
 ### Clam AV on Linux
-sudo apt update
-sudo apt-get install clamav clamav-daemon -y
-sudo apt-get install clamtk # install a GUI
-sudo systemctl stop clamav-freshclam
+1. sudo apt update
+2. sudo apt-get install clamav clamav-daemon -y
+3. sudo apt-get install clamtk # install a GUI
+4. sudo systemctl stop clamav-freshclam
 sudo freshclam #update clam
 sudo wget https://database.clamav.net/daily.cvd # get daily datatabase udpate
 sudo cp daily.cvd /var/lib/clamav/
-sudo systemctl start clamav-freshclam
-systemctl start clamav-freshclam # if deamon not started automatically
+sudo systemctl start clamav-freshclam # if deamon not started automatically
 
 
 ## Test commnads
-sudo clamscan --infected --detect-pua=yes --recursive /var/www/html/
+sudo clamscan --infected --detect-pua=yes --recursive /home/XXX-USER/Downloads/
 
 #Full Scan
 sudo clamscan \
